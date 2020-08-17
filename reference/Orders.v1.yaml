@@ -1,0 +1,42 @@
+openapi: 3.0.0
+info:
+  title: Orders
+  version: '1.0'
+  description: 'The Order API enables the client applications on Aptos One to manage orders. Clients will be able to access the Order API with its URI. Using the different endpoints of Orders resource and HTTP methods such as GET, POST, PUT etc., client applications can interact with the orders resource to perform various operations such as create, retrieve, and update orders'
+  contact:
+    name: Tarunabh
+    email: tarunabh@example.com
+servers:
+  - url: 'http://localhost:3000'
+paths:
+  /orders:
+    get:
+      summary: Your GET endpoint
+      tags: []
+      responses: {}
+      operationId: get-orders
+    post:
+      summary: ''
+      operationId: post-orders
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: {}
+        description: ''
+components:
+  schemas: {}
+  securitySchemes:
+    app_id:
+      name: appid
+      type: apiKey
+      in: query
